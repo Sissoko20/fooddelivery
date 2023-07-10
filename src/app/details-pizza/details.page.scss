@@ -1,0 +1,49 @@
+.flexContent{
+    display: flex;
+    flex-direction: row;
+    
+    /* align-content: flex-start; */
+    
+}
+
+.btncard{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    ion-item ion-button{
+        
+        width: 100%;
+        height: 50px;
+    }
+    
+}
+
+ion-content{
+    --background: rgb(16,15,31) ;
+    .flexitem{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      
+    }
+    ion-chip {
+      --background: #00213f;
+      --color: #adefd1;
+    }
+    ion-label{
+      --color: #fbfbfb;
+      font-weight: bolder;
+      
+      }
+    ion-title{
+      --color: #fbfbfb;
+  
+    }
+    ion-thumbnail {
+      --size: 140px;
+      --border-radius: 14px;
+    }
+  }

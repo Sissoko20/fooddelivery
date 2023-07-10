@@ -1,0 +1,116 @@
+
+
+<ion-content class="main" class="ion-padding">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons class="menulateral" slot="start" >
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    
+    </ion-toolbar>
+  </ion-header>
+
+  
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="12">
+      
+    <ion-segment class="ion-padding"  [scrollable]="true" value="pizza" mode="md" (ionChange)="segmentChanged($event)" class="flexSeg">">
+      <ion-segment-button value="pizza">
+        <ion-icon name="pizza" color="light"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="cake">
+        <ion-icon name="pizza" color="light"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="platsAfricains">
+        <ion-icon name="pin" color="light"></ion-icon>
+      </ion-segment-button>
+
+
+  </ion-segment>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>
+
+<ion-grid *ngIf="selectedSegment==='pizza'" fixed>
+  <ion-row>
+    <ion-col size="6" size-sm="6" size-md="6" *ngFor="let item of PizzaMenu | async" [routerLink]="['/details', item.id]">
+      <ion-card class="cardFlex">
+        <ion-avatar>
+          <img [src]="item.img" alt="Article" />
+        </ion-avatar>
+        <ion-card-header>
+          <ion-card-title color="light">{{ item.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+        
+          <ion-label color="light">Prix: {{ item.price }} </ion-label>
+          <!-- Autres informations sur l'article -->
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+  <ion-grid *ngIf="selectedSegment==='cake'" fixed>
+    <ion-row>
+      <ion-col size="6" size-sm="6" size-md="6" *ngFor="let item of CakeMenu | async" [routerLink]="['/details-cake', item.id]">
+        <ion-card>
+          <ion-avatar>
+            <img [src]="item.img" alt="Article" />
+          </ion-avatar>
+          <ion-card-header>
+            <ion-card-title color="light">{{ item.title }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+          
+            <label>Prix: {{ item.price }} </label>
+            <!-- Autres informations sur l'article -->
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="selectedSegment==='platsAfricains'" fixed>
+    <ion-row>
+      <ion-col size="6" size-sm="6" size-md="6"*ngFor="let item of PlAfricainMenu | async" [routerLink]="['/details-plat-africains', item.id]">
+        <ion-card>
+          <ion-avatar>
+            <img [src]="item.img" alt="Article" />
+          </ion-avatar>
+          <ion-card-header>
+            <ion-card-title color="light">{{ item.title }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+          
+            <label color="light">Prix: {{ item.price }} </label>
+            <!-- Autres informations sur l'article -->
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+</ion-content>
+
+<ion-footer  collapse="fade">
+  <ion-toolbar>
+    <div class="toolbar-content">
+    <ion-button fill="outline" shape="round" color="light">
+      <ion-icon slot="start" name="home"></ion-icon>
+      home
+    </ion-button>
+
+  </div>
+  </ion-toolbar>
+   
+  
+ 
+</ion-footer>
