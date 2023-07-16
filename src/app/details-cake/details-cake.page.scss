@@ -86,3 +86,21 @@ ion-content{
     border-radius: 68px;
   }
 }
+
+ion-modal{
+  --ion-background-color: radial-gradient(circle, #212020, #000000);
+ 
+
+}
+.btndeletecard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cartTextItem h1{
+  font-size: 3vh;
+  color: #ffc409;
+}
+.cartTextItem p{
+  color: #fbfbfb;
+}

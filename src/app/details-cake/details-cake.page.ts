@@ -50,7 +50,7 @@ export class DetailsCakePage implements OnInit {
   async addPanier(cakeDetail: Cake) {
     const heureActuelle= moment.utc();
     const heureDebut = moment.utc().set({ hour: 6, minute: 0, second: 0 });
-      const heureFin = moment.utc().set({ hour: 16, minute: 0, second: 0 });
+      const heureFin = moment.utc().set({ hour: 23, minute: 0, second: 0 });
   
    
    
