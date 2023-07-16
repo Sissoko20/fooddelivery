@@ -1,40 +1,88 @@
-.btncard{
-    
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    ion-item ion-button{
-        
-        width: 100%;
-        height: 50px;
-    }
-    
-}
-ion-content{
-    --background: rgb(16,15,31) ;
-    .flexitem{
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      justify-content: space-between;
-      align-items: center;
-      
-    }
-    ion-chip {
-      --background: #00213f;
-      --color: #adefd1;
-    }
-    ion-label{
-      --color: #fbfbfb;
-      font-weight: bolder;
-      
-      }
-    ion-title{
-      --color: #fbfbfb;
+.flexContent{
+  display: flex;
+  flex-direction: row;
   
-    }
-    ion-thumbnail {
-      --size: 140px;
-      --border-radius: 14px;
-    }
+  /* align-content: flex-start; */
+  
+}
+
+.btncard{
+  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  ion-item ion-button{
+      
+      width: 100%;
+      height: 50px;
   }
+  
+}
+
+ion-content{
+--ion-background-color: radial-gradient(circle, #212020, #000000);
+
+    
+  }
+  ion-chip {
+    --background: #00213f;
+    --color: #adefd1;
+  }
+  ion-label{
+    --color: #fbfbfb;
+    font-weight: bolder;
+    
+    }
+  ion-title{
+    --color: #fbfbfb;
+
+  }
+  ion-thumbnail {
+    --size: 140px;
+    --border-radius: 14px;
+  }
+
+
+.imgbox{
+  display: flex;
+  justify-content: center;
+  height: 42vh;
+}
+
+.imgbox img{
+  
+  border-radius: 55px 142px;
+} 
+.cardText{
+  color: white;
+  font-size: 20px;
+  padding: 6px;
+  width: 100%;
+  font-weight: normal;
+}
+.decriptText{
+  width: 100%;
+  font-size: 15px;
+  padding-right: 26px;
+  color:white;
+  /* margin-bottom: -22px; */
+}
+.totalprice{
+  border: 2px solid #ffc409;
+  border-radius: 29px 5px;
+  background: #050505;
+  text-align: center;
+  color: white;
+  width: 10vh;
+  transform: translate(72px, 2px);
+  padding: 5px;
+}
+.cardbtn{
+  display: flex;
+  justify-content: center;
+  transform: translate(10px, 15px);
+  ion-button ion-icon{
+    border: 2px solid;
+    border-radius: 68px;
+  }
+}
